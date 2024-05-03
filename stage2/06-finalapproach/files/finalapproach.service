@@ -7,7 +7,7 @@ After=readsb.target
 User=finalapproach
 Group=finalapproach
 WorkingDirectory=/home/finalapproach/finalapproach
-ExecStart=/home/finalapproach/finalapproach/venv/bin/python finalapproach.py "http://127.0.0.1:8504/tar1090/data/aircraft.json" "/dev/watchdog0"
+ExecStart=/home/finalapproach/finalapproach/venv/bin/python finalapproach.py --watchdog "/dev/watchdog0" stream --host "127.0.0.1" --port 30006
 Restart=always
 Environment="PATH=/home/finalapproach/finalapproach/"
 
